@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Request Cart</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html" class="active"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html"><p>Suppliers</p></a>
+                        <a href="groups.html"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html"><p>Request History</p></a>
+                        <a href="tasks.html"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <h1 class="page-title">Request Cart</h1>
+
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <h3>Dell XPS 15 Laptop</h3>
+                            <p class="item-category">Electronics</p>
+                            <p class="item-supplier">Supplier: Tech Distributors</p>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <input type="number" value="2" min="1">
+                        </div>
+                        <div class="item-actions">
+                            <button class="button-danger">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <h3>Office Desk Chair</h3>
+                            <p class="item-category">Furniture</p>
+                            <p class="item-supplier">Supplier: Office Plus</p>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <input type="number" value="5" min="1">
+                        </div>
+                        <div class="item-actions">
+                            <button class="button-danger">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <h3>Wireless Mouse</h3>
+                            <p class="item-category">Accessories</p>
+                            <p class="item-supplier">Supplier: Tech Distributors</p>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <input type="number" value="10" min="1">
+                        </div>
+                        <div class="item-actions">
+                            <button class="button-danger">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Cart Summary</h3>
+                    <div class="summary-row">
+                        <span>Total Items:</span>
+                        <span>3</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Quantity:</span>
+                        <span>17</span>
+                    </div>
+                    <div class="cart-actions">
+                        <a href="request-history.html" class="button-primary">Proceed to Request</a>
+                        <button class="button-secondary">Clear Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>

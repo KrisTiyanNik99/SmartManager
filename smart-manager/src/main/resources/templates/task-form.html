@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Task Form</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html"><p>Suppliers</p></a>
+                        <a href="groups.html"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html"><p>Request History</p></a>
+                        <a href="tasks.html" class="active"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <h1 class="page-title">Create/Edit Task</h1>
+
+            <div class="form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Task Title</label>
+                        <input type="text" id="title" name="title" required placeholder="Enter task title">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Enter task description"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskType">Task Type</label>
+                        <select id="taskType" name="taskType" required>
+                            <option value="one-time">One-time</option>
+                            <option value="recurring">Recurring</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resetTime">Reset Time (for recurring tasks)</label>
+                        <input type="time" id="resetTime" name="resetTime" placeholder="Select reset time">
+                        <small>When this time is reached, the task will reset to pending status.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" name="status" required>
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button-primary">Save Task</button>
+                        <a href="tasks.html" class="button-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>

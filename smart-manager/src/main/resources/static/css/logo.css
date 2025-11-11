@@ -1,0 +1,55 @@
+.landing-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px 40px;
+    display: flex;
+    gap: 12px;
+    z-index: 100;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.landing-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.landing-logo h1 {
+    font-size: 72px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff8a33 0%, #2d6cdf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.landing-logo p {
+    font-size: 18px;
+    color: #999;
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .landing-header {
+        padding: 15px 20px;
+    }
+
+    .landing-logo h1 {
+        font-size: 48px;
+    }
+
+    .landing-logo p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Suppliers</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html" class="active"><p>Suppliers</p></a>
+                        <a href="groups.html"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html"><p>Request History</p></a>
+                        <a href="tasks.html"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <div class="page-header">
+                <h1 class="page-title">Suppliers</h1>
+                <a href="supplier-form.html" class="button-primary">Add New Supplier</a>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Supplier Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tech Distributors</td>
+                            <td>contact@techdist.com</td>
+                            <td>+1-555-0123</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>
+                                <a href="supplier-form.html" class="button-secondary" style="margin-right: 8px;">Edit</a>
+                                <button class="button-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Office Plus</td>
+                            <td>sales@officeplus.com</td>
+                            <td>+1-555-0456</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>
+                                <a href="supplier-form.html" class="button-secondary" style="margin-right: 8px;">Edit</a>
+                                <button class="button-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cable Co</td>
+                            <td>info@cableco.com</td>
+                            <td>+1-555-0789</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>
+                                <a href="supplier-form.html" class="button-secondary" style="margin-right: 8px;">Edit</a>
+                                <button class="button-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Furniture World</td>
+                            <td>support@furnitureworld.com</td>
+                            <td>+1-555-0321</td>
+                            <td><span class="status-inactive">Inactive</span></td>
+                            <td>
+                                <a href="supplier-form.html" class="button-secondary" style="margin-right: 8px;">Edit</a>
+                                <button class="button-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>

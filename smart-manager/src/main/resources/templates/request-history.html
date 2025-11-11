@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Request History</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html"><p>Suppliers</p></a>
+                        <a href="groups.html"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html" class="active"><p>Request History</p></a>
+                        <a href="tasks.html"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <h1 class="page-title">Request History</h1>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Group</th>
+                            <th>Destination Channels</th>
+                            <th>Date Sent</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#REQ-001</td>
+                            <td>Supply Team</td>
+                            <td>
+                                <span class="channel-badge">💬 Discord</span>
+                                <span class="channel-badge">📱 Viber</span>
+                            </td>
+                            <td>2025-01-15</td>
+                            <td><span class="status-active">Sent</span></td>
+                        </tr>
+                        <tr>
+                            <td>#REQ-002</td>
+                            <td>Management</td>
+                            <td>
+                                <span class="channel-badge">📧 Gmail</span>
+                            </td>
+                            <td>2025-01-14</td>
+                            <td><span class="status-active">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#REQ-003</td>
+                            <td>All Staff</td>
+                            <td>
+                                <span class="channel-badge">💬 Discord</span>
+                                <span class="channel-badge">📱 Viber</span>
+                                <span class="channel-badge">📧 Gmail</span>
+                            </td>
+                            <td>2025-01-13</td>
+                            <td><span class="status-active">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#REQ-004</td>
+                            <td>Supply Team</td>
+                            <td>
+                                <span class="channel-badge">💌 Messenger</span>
+                            </td>
+                            <td>2025-01-12</td>
+                            <td><span class="status-inactive">Failed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>

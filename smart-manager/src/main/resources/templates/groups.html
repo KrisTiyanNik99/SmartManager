@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Groups</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html"><p>Suppliers</p></a>
+                        <a href="groups.html" class="active"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html"><p>Request History</p></a>
+                        <a href="tasks.html"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <div class="page-header">
+                <h1 class="page-title">Groups</h1>
+                <a href="group-form.html" class="button-primary">Create New Group</a>
+            </div>
+
+            <div class="groups-grid">
+                <div class="group-card">
+                    <h3>Supply Team</h3>
+                    <div class="group-channels">
+                        <span class="channel-badge">💬 Discord</span>
+                        <span class="channel-badge">📱 Viber</span>
+                    </div>
+                    <div class="form-actions">
+                        <a href="group-form.html" class="button-secondary">Edit</a>
+                        <button class="button-danger">Delete</button>
+                    </div>
+                </div>
+
+                <div class="group-card">
+                    <h3>Management</h3>
+                    <div class="group-channels">
+                        <span class="channel-badge">📧 Gmail</span>
+                        <span class="channel-badge">💌 Messenger</span>
+                    </div>
+                    <div class="form-actions">
+                        <a href="group-form.html" class="button-secondary">Edit</a>
+                        <button class="button-danger">Delete</button>
+                    </div>
+                </div>
+
+                <div class="group-card">
+                    <h3>All Staff</h3>
+                    <div class="group-channels">
+                        <span class="channel-badge">💬 Discord</span>
+                        <span class="channel-badge">📱 Viber</span>
+                        <span class="channel-badge">📧 Gmail</span>
+                    </div>
+                    <div class="form-actions">
+                        <a href="group-form.html" class="button-secondary">Edit</a>
+                        <button class="button-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>

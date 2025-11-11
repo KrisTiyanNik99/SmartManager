@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h1>SmartSupply</h1>
+            <p>Sign in to your account</p>
+
+            <form th:action="@{/login}" th:method="post" th:object="${loginRequest}">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" th:field="*{email}">
+                    <p class="status-inactive" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password" th:field="*{password}">
+                    <p class="status-inactive" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+                </div>
+
+                <button type="submit" class="button-primary" style="display: block; text-align: center; margin-top: 16px;">
+                    Log In
+                </button>
+            </form>
+
+            <div class="auth-link">
+                Don't have an account? <a href="/register">Sign up</a>
+            </div>
+        </div>
+
+        <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+    </div>
+</body>
+</html>

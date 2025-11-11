@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Settings</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html"><p>Suppliers</p></a>
+                        <a href="groups.html"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html"><p>Request History</p></a>
+                        <a href="tasks.html"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html" class="active"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <h1 class="page-title">Settings</h1>
+
+            <div class="settings-container">
+                <!-- Integrations Section -->
+                <div class="settings-section">
+                    <h2>Integrations</h2>
+                    <div class="integration-card">
+                        <div class="integration-info">
+                            <h3>Discord</h3>
+                            <p>Send requests to Discord channels</p>
+                        </div>
+                        <div class="integration-status connected">
+                            <span>Connected</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-info">
+                            <h3>Viber</h3>
+                            <p>Send requests via Viber</p>
+                        </div>
+                        <div class="integration-status">
+                            <span>Disconnected</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-info">
+                            <h3>Gmail</h3>
+                            <p>Send requests via email</p>
+                        </div>
+                        <div class="integration-status connected">
+                            <span>Connected</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-info">
+                            <h3>Messenger</h3>
+                            <p>Send requests via Messenger</p>
+                        </div>
+                        <div class="integration-status">
+                            <span>Disconnected</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reset Schedule Section -->
+                <div class="settings-section">
+                    <h2>Reset Schedule</h2>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <div class="schedule-info">
+                                <h3>Daily Recurring Tasks Reset</h3>
+                                <p>All recurring tasks reset at this time</p>
+                            </div>
+                            <div>
+                                <input type="time" value="18:00">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel Mapping Section -->
+                <div class="settings-section">
+                    <h2>Channel Mapping</h2>
+                    <p style="margin-bottom: 16px; color: #999;">View which groups are connected to which channels</p>
+                    <div class="mapping-list">
+                        <div class="mapping-item">
+                            <strong>Supply Team</strong>
+                            <span>→</span>
+                            <div style="display: flex; gap: 8px;">
+                                <span class="channel-badge">💬 Discord</span>
+                                <span class="channel-badge">📱 Viber</span>
+                            </div>
+                        </div>
+                        <div class="mapping-item">
+                            <strong>Management</strong>
+                            <span>→</span>
+                            <div style="display: flex; gap: 8px;">
+                                <span class="channel-badge">📧 Gmail</span>
+                                <span class="channel-badge">💌 Messenger</span>
+                            </div>
+                        </div>
+                        <div class="mapping-item">
+                            <strong>All Staff</strong>
+                            <span>→</span>
+                            <div style="display: flex; gap: 8px;">
+                                <span class="channel-badge">💬 Discord</span>
+                                <span class="channel-badge">📱 Viber</span>
+                                <span class="channel-badge">📧 Gmail</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>

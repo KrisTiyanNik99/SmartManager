@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSupply - Task Manager</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Sidebar (abbreviated) -->
+        <div class="sidebar-container">
+            <nav>
+                <div class="side-navbar">
+                    <div class="app-branding">
+                        <div class="app-name">SmartSupply</div>
+                        <div class="app-version">v1.0.0</div>
+                    </div>
+                    <div class="func-block">
+                        <a href="home"><p>Dashboard</p></a>
+                        <a href="cart.html"><p>Request Cart</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Inventory</span>
+                        <a href="products.html"><p>Products</p></a>
+                        <a href="suppliers.html"><p>Suppliers</p></a>
+                        <a href="groups.html"><p>Groups</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Requests</span>
+                        <a href="request-history.html"><p>Request History</p></a>
+                        <a href="tasks.html" class="active"><p>Task Manager</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Utility</span>
+                        <a href="settings.html"><p>Settings</p></a>
+                    </div>
+                    <div class="func-block">
+                        <span>Admin</span>
+                        <a href="admin.html"><p>User Management</p></a>
+                    </div>
+                    <div class="func-block">
+                        <a class="logout" href="login.html"><p>Logout</p></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            <div class="page-header">
+                <h1 class="page-title">Task Manager</h1>
+                <a href="task-form.html" class="button-primary">Add New Task</a>
+            </div>
+
+            <div class="tasks-container">
+                <div class="task-card">
+                    <div class="task-header">
+                        <h3>Review pending requests</h3>
+                        <span class="priority-badge high">High</span>
+                    </div>
+                    <p class="task-status">Type: <span class="status-badge">One-time</span></p>
+                    <p class="task-status">Status: <span class="status-badge in-progress">In Progress</span></p>
+                    <p>Check and approve all pending supply requests from this week.</p>
+                    <div class="task-actions">
+                        <button class="button-primary">Mark Complete</button>
+                        <a href="task-form.html" class="button-secondary">Edit</a>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <h3>Update inventory</h3>
+                        <span class="priority-badge medium">Medium</span>
+                    </div>
+                    <p class="task-status">Type: <span class="status-badge">Recurring</span></p>
+                    <p class="task-status">Resets: <span>Daily at 6:00 PM</span></p>
+                    <p class="task-status">Status: <span class="status-badge">Pending</span></p>
+                    <p>Update the inventory count for all products at the end of each day.</p>
+                    <div class="task-actions">
+                        <button class="button-primary">Mark Complete</button>
+                        <a href="task-form.html" class="button-secondary">Edit</a>
+                    </div>
+                </div>
+
+                <div class="task-card completed">
+                    <div class="task-header">
+                        <h3>Contact new suppliers</h3>
+                        <span class="priority-badge low">Low</span>
+                    </div>
+                    <p class="task-status">Type: <span class="status-badge">One-time</span></p>
+                    <p class="task-status">Status: <span class="status-badge completed">Completed</span></p>
+                    <p>Reach out to potential new suppliers for electronics.</p>
+                    <div class="task-actions">
+                        <a href="task-form.html" class="button-secondary">Edit</a>
+                        <button class="button-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+</body>
+</html>
