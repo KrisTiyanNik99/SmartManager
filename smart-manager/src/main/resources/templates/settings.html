@@ -4,165 +4,281 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartSupply - Settings</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main>
-        <!-- Sidebar (abbreviated) -->
-        <div class="sidebar-container">
-            <nav>
-                <div class="side-navbar">
-                    <div class="app-branding">
-                        <div class="app-name">SmartSupply</div>
-                        <div class="app-version">v1.0.0</div>
-                    </div>
-                    <div class="func-block">
-                        <a href="home"><p>Dashboard</p></a>
-                        <a href="cart.html"><p>Request Cart</p></a>
-                    </div>
-                    <div class="func-block">
-                        <span>Inventory</span>
-                        <a href="products.html"><p>Products</p></a>
-                        <a href="suppliers.html"><p>Suppliers</p></a>
-                        <a href="groups.html"><p>Groups</p></a>
-                    </div>
-                    <div class="func-block">
-                        <span>Requests</span>
-                        <a href="request-history.html"><p>Request History</p></a>
-                        <a href="tasks.html"><p>Task Manager</p></a>
-                    </div>
-                    <div class="func-block">
-                        <span>Utility</span>
-                        <a href="settings.html" class="active"><p>Settings</p></a>
-                    </div>
-                    <div class="func-block">
-                        <span>Admin</span>
-                        <a href="admin.html"><p>User Management</p></a>
-                    </div>
-                    <div class="func-block">
-                        <a class="logout" href="login.html"><p>Logout</p></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Main Content -->
-        <div class="content-area">
-            <h1 class="page-title">Settings</h1>
-
-            <div class="settings-container">
-                <!-- Integrations Section -->
-                <div class="settings-section">
-                    <h2>Integrations</h2>
-                    <div class="integration-card">
-                        <div class="integration-info">
-                            <h3>Discord</h3>
-                            <p>Send requests to Discord channels</p>
-                        </div>
-                        <div class="integration-status connected">
-                            <span>Connected</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox" checked>
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="integration-card">
-                        <div class="integration-info">
-                            <h3>Viber</h3>
-                            <p>Send requests via Viber</p>
-                        </div>
-                        <div class="integration-status">
-                            <span>Disconnected</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="integration-card">
-                        <div class="integration-info">
-                            <h3>Gmail</h3>
-                            <p>Send requests via email</p>
-                        </div>
-                        <div class="integration-status connected">
-                            <span>Connected</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox" checked>
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="integration-card">
-                        <div class="integration-info">
-                            <h3>Messenger</h3>
-                            <p>Send requests via Messenger</p>
-                        </div>
-                        <div class="integration-status">
-                            <span>Disconnected</span>
-                            <label class="toggle-switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
+<main>
+    <!-- Sidebar (abbreviated) -->
+    <div class="sidebar-container">
+        <nav>
+            <div class="side-navbar">
+                <div class="app-branding">
+                    <div class="app-name">SmartSupply</div>
+                    <div class="app-version">v1.0.0</div>
                 </div>
 
-                <!-- Reset Schedule Section -->
-                <div class="settings-section">
-                    <h2>Reset Schedule</h2>
-                    <div class="schedule-list">
-                        <div class="schedule-item">
-                            <div class="schedule-info">
-                                <h3>Daily Recurring Tasks Reset</h3>
-                                <p>All recurring tasks reset at this time</p>
-                            </div>
+                <div class="func-block">
+                    <a href="/home" class="active">
+                        <p>Dashboard</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                        </svg>
+                    </a>
+                    <a href="cart.html">
+                        <p>Request Cart</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="func-block">
+                    <span>Inventory</span>
+                    <a href="/products">
+                        <p>Products</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
+                        </svg>
+                    </a>
+                    <a href="/suppliers">
+                        <p>Suppliers</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+                        </svg>
+                    </a>
+                    <a href="/groups">
+                        <p>Groups</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="func-block">
+                    <span>Requests</span>
+                    <a href="request-history.html">
+                        <p>Request History</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                        </svg>
+                    </a>
+                    <a href="tasks.html">
+                        <p>Task Manager</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="func-block">
+                    <span>Utility</span>
+                    <a href="/settings">
+                        <p>Settings</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v-2a1 1 0 0 0-1-1h-.8l-.7-1.7.6-.5a1 1 0 0 0 0-1.5L17.7 5a1 1 0 0 0-1.5 0l-.5.6-1.7-.7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.8l-1.7.7-.5-.6a1 1 0 0 0-1.5 0L5 6.3a1 1 0 0 0 0 1.5l.6.5-.7 1.7H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.8l.7 1.7-.6.5a1 1 0 0 0 0 1.5L6.3 19a1 1 0 0 0 1.5 0l.5-.6 1.7.7v.8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.8l1.7-.7.5.6a1 1 0 0 0 1.5 0l1.4-1.4a1 1 0 0 0 0-1.5l-.6-.5.7-1.7h.8a1 1 0 0 0 1-1Z"/>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="func-block">
+                    <span>Admin</span>
+                    <a href="/admin.html">
+                        <p>User Management</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="func-block">
+                    <a class="logout" href="/logout">
+                        <p>Logout</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-area">
+        <h1 class="page-title">Settings</h1>
+
+        <!-- Added two-column layout: form on left, channel list on right -->
+        <div class="settings-layout">
+            <!-- Left side: Bot registration form -->
+            <div class="form-container">
+                <h2 style="margin-top: 0;">Register Bot</h2>
+                <p style="color: #999; font-size: 14px; margin-bottom: 24px;">Configure a new bot for sending requests through your preferred channel.</p>
+
+                <form action="/channels/register" method="POST">
+                    <!-- CSRF Token placeholder for Spring Security -->
+                    <!-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> -->
+
+                    <div class="form-group">
+                        <label for="channelType">Channel Type *</label>
+                        <select id="channelType" name="channelType" required>
+                            <option value="">Select a channel</option>
+                            <option value="VIBER">Viber</option>
+                            <option value="DISCORD">Discord</option>
+                            <option value="EMAIL">Email</option>
+                        </select>
+                        <!-- Placeholder for Thymeleaf validation error -->
+                        <!-- <small class="error-message" th:if="${#fields.hasErrors('channelType')}" th:errors="*{channelType}"></small> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="botName">Bot Name *</label>
+                        <input type="text" id="botName" name="botName" placeholder="Enter bot name (3-26 characters)" minlength="3" maxlength="26" required>
+                        <small>Minimum 3 characters, maximum 26 characters</small>
+                        <!-- Placeholder for Thymeleaf validation error -->
+                        <!-- <small class="error-message" th:if="${#fields.hasErrors('botName')}" th:errors="*{botName}"></small> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="authToken">Authentication Token *</label>
+                        <input
+                                type="password"
+                                id="authToken"
+                                name="authToken"
+                                placeholder="Enter authentication token"
+                                required
+                        >
+                        <!-- Placeholder for Thymeleaf validation error -->
+                        <!-- <small class="error-message" th:if="${#fields.hasErrors('authToken')}" th:errors="*{authToken}"></small> -->
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button-primary">Register Bot</button>
+                        <button type="button" class="button-secondary" onclick="window.location.href='home.html'">Cancel</button>
+                    </div>
+                </form>
+
+                <!-- Success message placeholder -->
+                <!-- <div class="success-message" th:if="${successMessage}" th:text="${successMessage}"></div> -->
+            </div>
+
+            <!-- Right side: Registered channels list -->
+            <div class="channels-panel">
+                <h2 style="margin-top: 0;">Registered Channels</h2>
+                <div class="channels-list">
+                    <!-- Static placeholder cards for preview -->
+                    <!-- Replace with Thymeleaf loop: <div th:each="channel : ${channels}" class="channel-card"> -->
+
+                    <div class="channel-card">
+                        <div class="channel-card-header">
                             <div>
-                                <input type="time" value="18:00">
+                                <h3>ViberSupplyBot</h3>
+                                <p class="channel-type">Viber</p>
                             </div>
+                            <span class="status-badge active">Active</span>
+                        </div>
+                        <div class="channel-card-actions">
+                            <button class="button-secondary btn-small" onclick="toggleStatus('ViberSupplyBot', 'VIBER')">Deactivate</button>
+                            <button class="button-danger btn-small" onclick="confirmDelete('ViberSupplyBot', 'VIBER')">Delete</button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Channel Mapping Section -->
-                <div class="settings-section">
-                    <h2>Channel Mapping</h2>
-                    <p style="margin-bottom: 16px; color: #999;">View which groups are connected to which channels</p>
-                    <div class="mapping-list">
-                        <div class="mapping-item">
-                            <strong>Supply Team</strong>
-                            <span>→</span>
-                            <div style="display: flex; gap: 8px;">
-                                <span class="channel-badge">💬 Discord</span>
-                                <span class="channel-badge">📱 Viber</span>
+                    <div class="channel-card">
+                        <div class="channel-card-header">
+                            <div>
+                                <h3>DiscordOrderBot</h3>
+                                <p class="channel-type">Discord</p>
                             </div>
+                            <span class="status-badge inactive">Inactive</span>
                         </div>
-                        <div class="mapping-item">
-                            <strong>Management</strong>
-                            <span>→</span>
-                            <div style="display: flex; gap: 8px;">
-                                <span class="channel-badge">📧 Gmail</span>
-                                <span class="channel-badge">💌 Messenger</span>
-                            </div>
-                        </div>
-                        <div class="mapping-item">
-                            <strong>All Staff</strong>
-                            <span>→</span>
-                            <div style="display: flex; gap: 8px;">
-                                <span class="channel-badge">💬 Discord</span>
-                                <span class="channel-badge">📱 Viber</span>
-                                <span class="channel-badge">📧 Gmail</span>
-                            </div>
+                        <div class="channel-card-actions">
+                            <button class="button-secondary btn-small" onclick="toggleStatus('DiscordOrderBot', 'DISCORD')">Activate</button>
+                            <button class="button-danger btn-small" onclick="confirmDelete('DiscordOrderBot', 'DISCORD')">Delete</button>
                         </div>
                     </div>
+
+                    <div class="channel-card">
+                        <div class="channel-card-header">
+                            <div>
+                                <h3>EmailNotifier</h3>
+                                <p class="channel-type">Email</p>
+                            </div>
+                            <span class="status-badge active">Active</span>
+                        </div>
+                        <div class="channel-card-actions">
+                            <button class="button-secondary btn-small" onclick="toggleStatus('EmailNotifier', 'EMAIL')">Deactivate</button>
+                            <button class="button-danger btn-small" onclick="confirmDelete('EmailNotifier', 'EMAIL')">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Thymeleaf template example:
+                    <div th:each="channel : ${channels}" class="channel-card">
+                        <div class="channel-card-header">
+                            <div>
+                                <h3 th:text="${channel.botName}">BotName</h3>
+                                <p class="channel-type" th:text="${channel.channelType}">Type</p>
+                            </div>
+                            <span th:class="${channel.active ? 'status-badge active' : 'status-badge inactive'}"
+                                  th:text="${channel.active ? 'Active' : 'Inactive'}">Status</span>
+                        </div>
+                        <div class="channel-card-actions">
+                            <form th:action="@{/channels/toggle}" method="POST" style="display:inline;">
+                                <input type="hidden" name="botName" th:value="${channel.botName}" />
+                                <input type="hidden" name="channelType" th:value="${channel.channelType}" />
+                                <button type="submit" class="button-secondary btn-small"
+                                        th:text="${channel.active ? 'Deactivate' : 'Activate'}">Toggle</button>
+                            </form>
+                            <button class="button-danger btn-small"
+                                    th:onclick="'confirmDelete(\'' + ${channel.botName} + '\', \'' + ${channel.channelType} + '\')'">Delete</button>
+                        </div>
+                    </div>
+                    -->
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+<footer class="footer">© 2025 SmartSupply. All rights reserved.</footer>
+
+<!-- Added JavaScript for delete confirmation dialog -->
+<script>
+    function confirmDelete(botName, channelType) {
+        if (confirm('Are you sure you want to delete "' + botName + '"? This action cannot be undone.')) {
+            // Create a form to send DELETE request
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '/channels/delete';
+
+            // Add hidden fields
+            const botNameInput = document.createElement('input');
+            botNameInput.type = 'hidden';
+            botNameInput.name = 'botName';
+            botNameInput.value = botName;
+
+            const channelTypeInput = document.createElement('input');
+            channelTypeInput.type = 'hidden';
+            channelTypeInput.name = 'channelType';
+            channelTypeInput.value = channelType;
+
+            // Add method override for DELETE (Spring MVC pattern)
+            const methodInput = document.createElement('input');
+            methodInput.type = 'hidden';
+            methodInput.name = '_method';
+            methodInput.value = 'DELETE';
+
+            form.appendChild(botNameInput);
+            form.appendChild(channelTypeInput);
+            form.appendChild(methodInput);
+
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+
+    function toggleStatus(botName, channelType) {
+        // In actual implementation, this would submit a form to toggle status
+        console.log('Toggle status for:', botName, channelType);
+    }
+</script>
 </body>
 </html>

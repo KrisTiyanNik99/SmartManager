@@ -301,7 +301,7 @@ label {
 }
 
 .dashboard-card {
-  /* Unified card background throughout app */
+  /* Unified card background */
   background: rgba(30, 41, 59, 0.95);
   border-radius: 12px;
   padding: 24px;
@@ -855,4 +855,128 @@ input:checked + .slider:before {
 .checkbox-group input[type="checkbox"] {
   width: auto;
   margin: 0;
+}
+
+/* Added validation message styles for form errors */
+.error-message {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #e74c3c;
+}
+
+.success-message {
+  padding: 12px 16px;
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid #2ecc71;
+  border-radius: 8px;
+  color: #2ecc71;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border-color: #e74c3c;
+}
+
+input.invalid:focus,
+select.invalid:focus,
+textarea.invalid:focus {
+  outline: 2px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Added styles for settings two-column layout */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Added styles for channels panel */
+.channels-panel {
+  background: rgba(30, 41, 59, 0.95);
+  border-radius: 12px;
+  padding: 24px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+
+.channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.channel-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.channel-card:hover {
+  border-color: #ff8a33;
+  box-shadow: 0 2px 8px rgba(255, 138, 51, 0.15);
+}
+
+.channel-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.channel-card-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  color: #e5e5e5;
+}
+
+.channel-type {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.status-badge.inactive {
+  background: rgba(255, 255, 255, 0.1);
+  color: #999;
+}
+
+.channel-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .channels-panel {
+    max-height: 500px;
+  }
 }

@@ -5,33 +5,48 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class TestController {
-    @GetMapping("products.html")
+    @GetMapping("/products.html")
     public String getProduct() {
         return "products.html";
     }
 
-    @GetMapping("register.html")
+    @GetMapping("/products")
+    public String getProductsss() {
+        return "products.html";
+    }
+
+    @GetMapping("/register.html")
     public String getProductss() {
         return "register.html";
     }
 
-    @GetMapping("settings.html")
+    @GetMapping("/settings")
     public String getSettings() {
         return "settings.html";
     }
 
-    @GetMapping("product-form.html")
+    @GetMapping("/product-form.html")
     public String getProducts() {
         return "product-form.html";
     }
 
-    @GetMapping("cart.html")
+    @GetMapping("/cart.html")
     public String getCart() {
         return "cart.html";
     }
 
-    @GetMapping("tasks.html")
+    @GetMapping("/tasks.html")
     public String getTask() {
         return "tasks.html";
+    }
+
+    @GetMapping("/groups")
+    public String getGroupo() {
+        return "groups.html";
+    }
+
+    @GetMapping("/group-form.html")
+    public String getGroupos() {
+        return "group-form.html";
     }
 }

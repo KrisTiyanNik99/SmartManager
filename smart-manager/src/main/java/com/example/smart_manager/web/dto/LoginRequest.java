@@ -5,8 +5,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Builder
-@Setter
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginRequest {

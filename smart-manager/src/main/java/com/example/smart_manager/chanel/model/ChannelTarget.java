@@ -19,8 +19,7 @@ public class ChannelTarget {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
-    @ManyToOne
+    @ManyToOne(optional = false)
     private Channel channel;
 
     private String name;
