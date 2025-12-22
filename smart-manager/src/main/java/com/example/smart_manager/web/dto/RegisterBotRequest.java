@@ -1,6 +1,6 @@
 package com.example.smart_manager.web.dto;
 
-import com.example.smart_manager.chanel.model.ChannelType;
+import com.example.smart_manager.chanel.model.ChannelBotType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -10,9 +10,9 @@ import lombok.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterChannel {
+public class RegisterBotRequest {
     @NotBlank(message = "Type cannot be null!")
-    private ChannelType channelType;
+    private ChannelBotType channelType;
 
     @NotBlank(message = "Fill name for the bot!")
     @Size(min = 3, max = 26)

@@ -6,33 +6,24 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
 
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"bot_name", "type"}))
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"channelBot", "externalId"}))
 public class Channel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(name = "bot_name", nullable = false)
-    private String botName;
+    @ManyToOne(optional = false)
+    private ChannelBot channelBot;
+
+    private String name;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private ChannelType type;
-
-    @Column(nullable = false)
-    private String authToken;
-
-    @OneToMany(mappedBy = "channel")
-    private Set<ChannelTarget> channelTargets = new HashSet<>();
-
-    private boolean isActive;
+    private String externalId;
 }

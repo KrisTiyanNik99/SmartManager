@@ -1,14 +1,14 @@
 package com.example.smart_manager;
 
-import com.example.smart_manager.chanel.repository.ChannelRepository;
+import com.example.smart_manager.chanel.repository.ChannelBotRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Test implements CommandLineRunner {
-    private final ChannelRepository repository;
+    private final ChannelBotRepository repository;
 
-    public Test(ChannelRepository repository) {
+    public Test(ChannelBotRepository repository) {
         this.repository = repository;
     }
 

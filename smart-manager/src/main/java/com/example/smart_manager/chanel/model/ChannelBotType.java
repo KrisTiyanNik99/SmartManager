@@ -1,6 +1,6 @@
 package com.example.smart_manager.chanel.model;
 
-public enum ChannelType {
+public enum ChannelBotType {
     DISCORD,
     VIBER,
     GMAIL;

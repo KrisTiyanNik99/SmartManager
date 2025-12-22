@@ -20,11 +20,6 @@ public class TestController {
         return "register.html";
     }
 
-    @GetMapping("/settings")
-    public String getSettings() {
-        return "settings.html";
-    }
-
     @GetMapping("/product-form.html")
     public String getProducts() {
         return "product-form.html";

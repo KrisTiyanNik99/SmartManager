@@ -114,41 +114,32 @@
                 <h2 style="margin-top: 0;">Register Bot</h2>
                 <p style="color: #999; font-size: 14px; margin-bottom: 24px;">Configure a new bot for sending requests through your preferred channel.</p>
 
-                <form action="/channels/register" method="POST">
+                <form th:action="@{/channels/register}" th:method="POST" th:object="${registerBotRequest}">
                     <!-- CSRF Token placeholder for Spring Security -->
                     <!-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> -->
 
                     <div class="form-group">
                         <label for="channelType">Channel Type *</label>
-                        <select id="channelType" name="channelType" required>
-                            <option value="">Select a channel</option>
-                            <option value="VIBER">Viber</option>
-                            <option value="DISCORD">Discord</option>
-                            <option value="EMAIL">Email</option>
+                        <select id="channelType" name="channelType" required th:field="*{channelType}">
+                            <option th:each="channel : ${T(smart_manager.chanel.model.ChannelBotType).values()}" th:value="${channel}" th:text="${channel}">Select a channel</option>
                         </select>
                         <!-- Placeholder for Thymeleaf validation error -->
-                        <!-- <small class="error-message" th:if="${#fields.hasErrors('channelType')}" th:errors="*{channelType}"></small> -->
+                        <small class="error-message" th:if="${#fields.hasErrors('channelType')}" th:errors="*{channelType}"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="botName">Bot Name *</label>
-                        <input type="text" id="botName" name="botName" placeholder="Enter bot name (3-26 characters)" minlength="3" maxlength="26" required>
+                        <input type="text" id="botName" name="botName" placeholder="Enter bot name (3-26 characters)" minlength="3" maxlength="26" required th:field="*{botName}">
                         <small>Minimum 3 characters, maximum 26 characters</small>
                         <!-- Placeholder for Thymeleaf validation error -->
-                        <!-- <small class="error-message" th:if="${#fields.hasErrors('botName')}" th:errors="*{botName}"></small> -->
+                        <small class="error-message" th:if="${#fields.hasErrors('botName')}" th:errors="*{botName}"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="authToken">Authentication Token *</label>
-                        <input
-                                type="password"
-                                id="authToken"
-                                name="authToken"
-                                placeholder="Enter authentication token"
-                                required
-                        >
+                        <input type="password" id="authToken" name="authToken" placeholder="Enter authentication token" required th:field="*{authToken}">
                         <!-- Placeholder for Thymeleaf validation error -->
-                        <!-- <small class="error-message" th:if="${#fields.hasErrors('authToken')}" th:errors="*{authToken}"></small> -->
+                        <small class="error-message" th:if="${#fields.hasErrors('authToken')}" th:errors="*{authToken}"></small>
                     </div>
 
                     <div class="form-actions">

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChannelTargetRequest {
+public class ChannelRequest {
     @NotBlank(message = "External id cannot be null or empty!")
     private String externalId;
 

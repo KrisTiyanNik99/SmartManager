@@ -1,49 +1,50 @@
 package com.example.smart_manager.chanel.service;
 
+import com.example.smart_manager.chanel.model.ChannelBot;
 import com.example.smart_manager.chanel.model.Channel;
+import com.example.smart_manager.chanel.model.ChannelBotType;
 import com.example.smart_manager.chanel.repository.ChannelRepository;
 import com.example.smart_manager.security.TokenEncoder;
-import com.example.smart_manager.web.dto.ChannelTargetRequest;
-import com.example.smart_manager.web.dto.RegisterChannel;
-import jakarta.transaction.Transactional;
+import com.example.smart_manager.web.dto.ChannelRequest;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 public abstract class ChannelService {
-    private static final String BOT_ALREADY_EXIST = "Bot with such name and type already exist!";
-    private static final String ADDED_NEW_BOT = "New bot configuration have been registered!";
+    private static final String CHANNEL_TARGETS = "New channel targets are registered!";
+    private static final String WRONG_SERVICE_CLASS = "This is not the correct type of ChannelTargetService for this type Channel Bot!";
 
-    private final ChannelRepository channelRepository;
-    private final ChannelTargetService channelTargetService;
+    private final ChannelRepository channelTargetRepository;
 
-    public ChannelService(ChannelRepository channelRepository, ChannelTargetService channelTargetService) {
-        this.channelRepository = channelRepository;
-        this.channelTargetService = channelTargetService;
+    public ChannelService(ChannelRepository channelTargetRepository) {
+        this.channelTargetRepository = channelTargetRepository;
     }
 
-    @Transactional
-    public void registerBot(RegisterChannel request) {
-        Optional<Channel> optChannel = channelRepository.findByBotNameAndType(request.getBotName(), request.getChannelType());
-
-        if (optChannel.isPresent()) {
-            throw new RuntimeException(BOT_ALREADY_EXIST);
+    public void persistChannelsForBot(ChannelBot channelBot) {
+        if (!canServiced(channelBot.getType())) {
+            throw new RuntimeException(WRONG_SERVICE_CLASS);
         }
 
-        Channel channel = Channel.builder()
-                .botName(request.getBotName())
-                .type(request.getChannelType())
-                .authToken(TokenEncoder.encode(request.getAuthToken()))
-                .build();
+        List<ChannelRequest> channelRequest = getChannels(TokenEncoder.decoded(channelBot.getAuthToken()));
+        List<Channel> channelList = channelRequest.stream()
+                .map(target -> toChannelTarget(channelBot, target))
+                .toList();
 
-        channelRepository.save(channel);
-        log.info(ADDED_NEW_BOT);
-
-        List<ChannelTargetRequest> channelTargets = getChannelTargets(request.getAuthToken());
-        channelTargetService.saveChannelTargets(channel, channelTargets);
+        channelTargetRepository.saveAll(channelList);
+        log.info(CHANNEL_TARGETS);
     }
 
-    public abstract List<ChannelTargetRequest> getChannelTargets(String authToken);
+    public abstract boolean canServiced(ChannelBotType channelType);
+    protected abstract List<ChannelRequest> getChannels(String authBotToken);
+
+
+    //  ################################### ------------------        Support methods        ------------------ ###################################
+    private Channel toChannelTarget(ChannelBot channelBot, ChannelRequest channelRequest) {
+        return Channel.builder()
+                .channelBot(channelBot)
+                .externalId(channelRequest.getExternalId())
+                .name(channelRequest.getName())
+                .build();
+    }
 }
